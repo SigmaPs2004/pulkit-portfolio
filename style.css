@@ -39,8 +39,200 @@ body {
   color: #1b6ef3;
 }
 
-.landing { /* ... same as previous ... */ }
-/* [Keep previous landing, achievements, case studies, projects, etc. styles as above] */
+.landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #183569 0%, #3069d1 100%);
+  min-height: 450px;
+  padding: 4rem 8vw 2rem 8vw;
+  color: #fff;
+}
+.landing-left {
+  flex: 1.2;
+}
+.landing-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #7b61ff 40%, #f5a6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.view-work {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  transition: color 0.2s;
+}
+.view-work:hover { color: #f5a6ff; }
+.arrow { font-size: 1.1em; margin-left: 0.3em; }
+.download-resume {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: rgba(255,255,255,0.10);
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+.download-resume:hover { background: rgba(255,255,255,0.20);}
+.download-icon { margin-right: 0.6em; }
+
+.landing-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.achievements {
+  background: rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 340px;
+  box-shadow: 0 4px 32px rgba(24,54,105,0.07);
+}
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.achieve-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  background: none;
+}
+.bg-purple { background: linear-gradient(135deg,#a991fc,#a991fc 80%,#7b61ff 100%);}
+.bg-green { background: linear-gradient(135deg,#7ce9a5,#33c3b9 100%);}
+.bg-pink { background: linear-gradient(135deg,#ffb5e1,#f58ce0 100%);}
+.achieve-text { font-size: 1.1rem; font-weight: 500;}
+
+.case-studies {
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+  background: #fff;
+}
+.case-studies h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.cs-desc {
+  font-size: 1.1rem;
+  color: #48506e;
+  margin-bottom: 2.5rem;
+}
+.case-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.case-card {
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(24,54,105,0.08);
+  width: 340px;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s;
+}
+.case-card:hover { transform: translateY(-8px) scale(1.03);}
+.case-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  background: #e9e9e9;
+}
+.case-content {
+  padding: 1.5rem;
+}
+.case-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+}
+.case-content p {
+  color: #506080;
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+.case-content a {
+  text-decoration: none;
+  color: #1b6ef3;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.case-content a .arrow { font-size: 1em; }
+
+.featured-projects {
+  padding: 4rem 0 2rem 0;
+  background: #f8fafc;
+  text-align: center;
+}
+.featured-projects h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.fp-desc {
+  font-size: 1.1rem;
+  color: #48506e;
+  margin-bottom: 2.5rem;
+}
+.projects-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(24,54,105,0.07);
+  width: 180px;
+  padding: 2.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.18s;
+}
+.project-card:hover { transform: translateY(-8px) scale(1.05);}
+.project-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #23272f;
+}
 
 .top-decks {
   padding: 4rem 0 2rem 0;
@@ -177,16 +369,20 @@ body {
 .contact-linkedin:hover { background: #2355d3;}
 .contact-email {
   background: #f3f3f4;
-  color: #bcbcbc;
+  color: #3972ff;
   font-weight: 600;
   border: none;
   padding: 1rem 2.3rem;
   border-radius: 12px;
   font-size: 1.17rem;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  cursor: not-allowed;
+  cursor: pointer;
+}
+.contact-email:hover {
+  background: #e6e6e8;
 }
 .contact-footer {
   margin-top: 2.5rem;
