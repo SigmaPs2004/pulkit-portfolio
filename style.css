@@ -551,3 +551,32 @@ body {
     height: 26px;
   }
 }
+
+/* ===== Landing Section Buttons ===== */
+.landing-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 720px;
+}
+
+.hero-btn {
+  flex: 1;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: background 0.18s, color 0.18s;
+}
+
+.hero-btn:hover {
+  background: #1b6ef3;
+  color: #fff;
+}
