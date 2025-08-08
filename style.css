@@ -71,10 +71,10 @@ body {
 }
 
 .front-avatar {
-  width: 400px;
-  max-width: 95vw;
-  margin-top: 24px;
-  margin-left: 25px;
+  width: 500px;       /* Increased from 350px or 400px */
+  max-width: 100%;    /* Allow it to fill available space */
+  margin-top: 0;      /* Remove extra top margin */
+  margin-left: 0;     /* Align nicely */
   border-radius: 30px;
 }
 
