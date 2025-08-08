@@ -65,9 +65,10 @@ body {
   flex: 0 0 500px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center; /* centers horizontally */
+  justify-content: center; /* centers vertically */
   padding-right: 30px;
+  text-align: center; /* ensures text aligns to center */
 }
 
 .landing-avatar {
