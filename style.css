@@ -19,6 +19,7 @@ body {
   top: 0;
   z-index: 100;
 }
+
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
@@ -26,11 +27,13 @@ body {
   display: flex;
   align-items: center;
 }
+
 .iit-logo {
   height: 38px;
   width: auto;
   display: block;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -38,18 +41,20 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav-links li a {
   text-decoration: none;
   color: #23272f;
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .nav-links li a:hover,
 .nav-links li a.active {
   color: #1b6ef3;
 }
 
-/* ===== HERO / LANDING SECTION (Merged + redesigned) ===== */
+/* ===== HERO / LANDING SECTION ===== */
 .landing {
   display: flex;
   justify-content: center;
@@ -102,7 +107,6 @@ body {
   max-width: 40rem;
 }
 
-/* Right column (achievements card) */
 .landing-right {
   flex: 1;
   display: flex;
@@ -158,16 +162,19 @@ body {
   line-height: 1.2;
 }
 
+/* ===== PAGE SECTIONS ===== */
 .case-studies {
   padding: 4rem 0 2rem 0;
   text-align: center;
   background: #fff;
 }
+
 .case-studies h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
 .cs-desc {
   font-size: 1.3rem;
   color: #233;
@@ -177,6 +184,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .case-cards {
   display: flex;
   gap: 2rem;
@@ -184,6 +192,7 @@ body {
   flex-wrap: wrap;
   margin-top: 2rem;
 }
+
 .case-card {
   background: #fff;
   border-radius: 20px;
@@ -197,7 +206,11 @@ body {
   min-height: 100%;
   margin-bottom: 2rem;
 }
-.case-card:hover { transform: translateY(-8px) scale(1.03);}
+
+.case-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
 .case-card img {
   width: 100%;
   height: 195px;
@@ -207,23 +220,27 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 .case-content {
   padding: 1.8rem 1.5rem 1.5rem 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .case-content h3 {
   font-size: 1.45rem;
   margin-bottom: 0.7rem;
   font-weight: 800;
 }
+
 .case-content p {
   color: #2e3b4e;
   font-size: 1.07rem;
   margin-bottom: 1.3rem;
   margin-top: 0;
 }
+
 .case-btn {
   font-weight: 600;
   text-decoration: none;
@@ -233,9 +250,11 @@ body {
   margin-top: auto;
   display: inline-block;
 }
+
 .case-btn:hover {
   color: #1b6ef3;
 }
+
 .arrow { font-size: 1em; }
 
 .featured-projects {
@@ -243,16 +262,19 @@ body {
   background: #f8fafc;
   text-align: center;
 }
+
 .featured-projects h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
 .fp-desc {
   font-size: 1.1rem;
   color: #48506e;
   margin-bottom: 2.5rem;
 }
+
 .projects-grid {
   display: flex;
   gap: 2rem;
@@ -260,6 +282,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
+
 .project-card {
   background: #fff;
   border-radius: 18px;
@@ -271,7 +294,11 @@ body {
   align-items: center;
   transition: transform 0.18s;
 }
-.project-card:hover { transform: translateY(-8px) scale(1.05);}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
 .project-icon {
   width: 64px;
   height: 64px;
@@ -280,11 +307,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .project-title {
   font-size: 1.18rem;
   font-weight: 700;
   color: #23272f;
 }
+
 .project-link {
   text-decoration: none;
   color: #23272f;
@@ -292,6 +321,7 @@ body {
   font-size: 1.18rem;
   transition: color 0.2s;
 }
+
 .project-link:hover {
   color: #1b6ef3;
 }
@@ -301,16 +331,19 @@ body {
   background: #fff;
   text-align: center;
 }
+
 .top-decks h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
 .td-desc {
   font-size: 1.1rem;
   color: #48506e;
   margin-bottom: 2.5rem;
 }
+
 .deck-cards-img {
   display: flex;
   gap: 2.5rem;
@@ -318,18 +351,21 @@ body {
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
+
 .deck-card-img {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
 }
+
 .deck-title-img {
   font-size: 1.19rem;
   font-weight: 600;
   margin-bottom: 1.1rem;
   margin-top: 0.4rem;
 }
+
 .deck-card-img img {
   width: 100%;
   max-width: 340px;
@@ -339,6 +375,7 @@ body {
   box-shadow: 0 2px 12px rgba(24,54,105,0.08);
   background: #e9e9e9;
 }
+
 .top-decks-btn {
   display: block;
   margin: 2.5rem auto 0 auto;
@@ -354,6 +391,7 @@ body {
   max-width: 370px;
   text-align: center;
 }
+
 .top-decks-btn:hover {
   background: #1b6ef3;
   color: #fff;
@@ -363,6 +401,7 @@ body {
   padding: 4rem 0 2rem 0;
   background: #f8fafc;
 }
+
 .about-container {
   display: flex;
   justify-content: center;
@@ -371,25 +410,30 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .about-text {
   flex: 2;
 }
+
 .about-text h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
+
 .about-text p {
   font-size: 1.12rem;
   color: #23272f;
   margin-bottom: 1.1rem;
 }
+
 .about-img {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .about-img img {
   width: 290px;
   height: 290px;
@@ -403,12 +447,14 @@ body {
   text-align: center;
   background: #fff;
 }
+
 .contact-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #3972ff;
   margin-bottom: 1rem;
 }
+
 .contact-desc {
   font-size: 1.18rem;
   color: #c0c5d4;
@@ -417,13 +463,15 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .contact-btns {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 2.7rem;
   flex-wrap: wrap;
 }
+
 .contact-linkedin {
   background: #3972ff;
   color: #fff;
@@ -439,23 +487,11 @@ body {
   box-shadow: 0 2px 12px rgba(57,114,255,0.08);
   transition: background 0.15s;
 }
-.contact-linkedin:hover { background: #2355d3;}
-.contact-github {
-  background: #111827;
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  padding: 1rem 2.3rem;
-  border-radius: 12px;
-  font-size: 1.17rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  box-shadow: 0 2px 12px rgba(17,24,39,0.10);
-  transition: background 0.15s;
+
+.contact-linkedin:hover {
+  background: #2355d3;
 }
-.contact-github:hover { background: #000; }
+
 .contact-email {
   background: #f3f3f4;
   color: #3972ff;
@@ -470,24 +506,29 @@ body {
   gap: 0.7rem;
   cursor: pointer;
 }
+
 .contact-email:hover {
   background: #e6e6e8;
 }
+
 .contact-footer {
   margin-top: 2.5rem;
 }
+
 .contact-footer hr {
   border: none;
   border-top: 1px solid #e7e7e7;
   margin: 0 auto 1.1rem auto;
   width: 80%;
 }
+
 .footer-content {
   color: #8b8b8b;
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
 }
 
+/* ===== Responsive ===== */
 @media (max-width: 1200px) {
   .landing-left {
     flex: 0 0 380px;
@@ -501,7 +542,9 @@ body {
     padding: 18px 16px;
     width: 100%;
   }
-  .case-card { width: 320px; }
+  .case-card {
+    width: 320px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -510,7 +553,8 @@ body {
     align-items: center;
     padding: 40px 4% 60px 4%;
   }
-  .landing-left, .landing-right {
+  .landing-left,
+  .landing-right {
     margin-left: 0;
     margin-right: 0;
     align-items: center;
