@@ -1,194 +1,598 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Pulkit Soni Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/iit-logo.png" alt="IIT Logo" class="iit-logo">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#top-decks">Top Decks</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+/* ===== Global / Nav / Base ===== */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f8fafc;
+  color: #23272f;
+}
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="landing" id="home">
-    <div class="landing-left" style="align-items: center; text-align: center;">
-      <img src="images/avatar-business.png" alt="Pulkit Business Avatar" class="landing-avatar">
-      <h1>Hi, this is <span class="main-title-highlight">Pulkit</span></h1>
-    </div>
-    
-    <div class="landing-right">
-      <div class="hero-btn-container">
-        <a href="#case-studies" class="hero-btn">View my work</a>
-      </div>
-      <div class="achievements">
-        <div class="achievement">
-          <span class="achieve-icon">
-            <img src="images/mapmyindia-logo.png" alt="MapMyIndia Logo">
-          </span>
-          <span class="achieve-text">PM Intern @ MapMyIndia (May’25 - Jul’25)</span>
-        </div>
-        <div class="achievement">
-          <span class="achieve-icon">
-            <img src="images/Fortune-500-logo.png" alt="Fortune 500 Company Logo">
-          </span>
-          <span class="achieve-text">Cracked a Fortune 500 Company</span>
-        </div>
-        <div class="achievement">
-          <span class="achieve-icon">
-            <img src="images/YC-logo.png" alt="YC, Harvard & Stanford Logo">
-          </span>
-          <span class="achieve-text">Worked with startups backed by YC & Harvard</span>
-        </div>
-      </div>
-      <div class="hero-btn-container">
-        <a href="https://drive.google.com/file/d/13NFIiB8-4aiiBa8_D561e8hIwi0qo2NB/view" target="_blank" class="hero-btn">Download resume</a>
-      </div>
-    </div>
+.navbar {
+  width: 100%;
+  background: #eaf3fc;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+.iit-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #23272f;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #1b6ef3;
+}
 
-  </section>
+/* ===== HERO / LANDING SECTION (Merged + redesigned) ===== */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #a3b9f7 0%, #bfa8e6 50%, #e8a6e4 100%);
+  padding: 60px 5%;
+  color: #fff;
+  min-height: 70vh;
+  box-sizing: border-box;
+}
 
-  <!-- ===== REST OF PAGE ===== -->
-  <!-- Case Studies Section -->
-  <section id="case-studies" class="case-studies">
-    <h2>Case Studies</h2>
-    <p class="cs-desc">Deep dives into strategic product challenges across automotive safety, fintech payments, and presentation technology sectors.</p>
-    <div class="case-cards">
-      <div class="case-card">
-        <img src="images/vehicle-safety.png" alt="Vehicle Safety Companies">
-        <div class="case-content">
-          <h3>Vehicle Safety Companies</h3>
-          <p>Strategic analysis of automotive safety technology integration and user adoption patterns in the connected vehicle ecosystem.</p>
-          <a class="case-btn" href="https://drive.google.com/file/d/1YgiqW-HRZb9UtkrE8eHKSK0s2kpOzmrS/view" target="_blank">View Case Study <span class="arrow">→</span></a>
-        </div>
-      </div>
-      <div class="case-card">
-        <img src="images/payment-gateway.png" alt="Payment Gateway Companies">
-        <div class="case-content">
-          <h3>Payment Gateway Companies</h3>
-          <p>Product strategy for fintech payment solutions focusing on security, user experience, and market penetration in digital commerce.</p>
-          <a class="case-btn" href="https://drive.google.com/file/d/1lhP-RNYmDeyp5u5YFaI377Z3q_tVdlIq/view" target="_blank">View Case Study <span class="arrow">→</span></a>
-        </div>
-      </div>
-      <div class="case-card">
-        <img src="images/projection-display.png" alt="Projection & Display Companies">
-        <div class="case-content">
-          <h3>Projection & Display Companies</h3>
-          <p>Market analysis and product roadmap development for next-generation presentation and display technology solutions.</p>
-          <a class="case-btn" href="https://drive.google.com/file/d/1zNdnLh4mvQJopMDl_nAXMyDy884Sb5Bn/view" target="_blank">View Case Study <span class="arrow">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
+.landing-left {
+  flex: 0 0 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers horizontally */
+  justify-content: center; /* centers vertically */
+  padding-right: 30px;
+  text-align: center; /* ensures text aligns to center */
+}
 
-  <!-- Featured Projects -->
-  <section id="projects" class="featured-projects">
-    <h2>Featured Projects</h2>
-    <p class="fp-desc">Strategic product analysis and solutions for industry-leading technology companies.</p>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-icon amazon">
-          <img src="images/amazon.svg" alt="Amazon logo" width="64" height="64">
-        </div>
-        <div class="project-title">
-          <a class="project-link" href="https://drive.google.com/file/d/1o4ti-lnfHJhYF0yM51zjJBH5c4F41kTK/view" target="_blank">Amazon</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon netflix">
-          <img src="images/netflix.svg" alt="Netflix logo" width="64" height="64">
-        </div>
-        <div class="project-title">
-          <a class="project-link" href="https://drive.google.com/file/d/1NFCQPNL128-uIHEQ_sWX82wcC3N29kkb/view" target="_blank">Netflix</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon uber">
-          <img src="images/uber.svg" alt="Uber logo" width="64" height="64">
-        </div>
-        <div class="project-title">
-          <a class="project-link" href="https://drive.google.com/file/d/1hqPL9ZNTDzsrhd-EsDpSIeoRoM5rSnh0/view" target="_blank">Uber</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon airbnb">
-          <img src="images/airbnb.svg" alt="Airbnb logo" width="64" height="64">
-        </div>
-        <div class="project-title">
-          <a class="project-link" href="https://drive.google.com/file/d/1XzqLICYKz1Yrs7dQ7nVIme4y-WbdPJcs/view" target="_blank">Airbnb</a>
-        </div>
-      </div>
-    </div>
-  </section>
+.landing-avatar {
+  width: 500px;          /* enlarged for stronger hero */
+  max-width: 95%;
+  margin: 0 0 18px 0;
+  border-radius: 18px;
+  background: transparent;
+  display: block;
+  box-shadow: 0 18px 40px rgba(24,54,105,0.15);
+}
 
-  <!-- Top Decks -->
-  <section id="top-decks" class="top-decks">
-    <h2>Top Decks</h2>
-    <p class="td-desc">Strategic presentation work showcasing analytical frameworks and executive-level insights.</p>
-    <div class="deck-cards-img">
-      <div class="deck-card-img">
-        <div class="deck-title-img">Strategic Analysis</div>
-        <a href="https://drive.google.com/file/d/1cD1RvWzRZVwqqh_whKOtwUsGdl6gV3TE/view" target="_blank">
-          <img src="images/strategic-analysis-deck.png" alt="Strategic Analysis Deck">
-        </a>
-      </div>
-      <div class="deck-card-img">
-        <div class="deck-title-img">User Experience Strategy</div>
-        <a href="https://drive.google.com/file/d/1qo-rtHcD-IJ_skThuYmjDfBd3c18KYv_/view" target="_blank">
-          <img src="images/user-experience-strategy-deck.png" alt="User Experience Strategy Deck">
-        </a>
-      </div>
-      <div class="deck-card-img">
-        <div class="deck-title-img">Innovation Strategy</div>
-        <a href="https://drive.google.com/file/d/1a93sr0LQ-qOEjo8rRI3ObLi9-MQ2D2Yn/view" target="_blank">
-          <img src="images/innovation-strategy-deck.png" alt="Innovation Strategy Deck">
-        </a>
-      </div>
-    </div>
-    <a class="top-decks-btn" href="https://drive.google.com/drive/u/2/folders/1mSDDVoOlRlZ3ZiPkAHJDNER2mFkNyj7g?usp=sharing" target="_blank">
-      View all case studies
-    </a>
-  </section>
+.landing-left h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 10px 0;
+  line-height: 1.02;
+}
 
-  <!-- About Me -->
-  <section id="about" class="about-me">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I'm a strategic product professional with a passion for transforming complex business challenges into elegant, user-centered solutions. My approach combines analytical rigor with creative problem-solving.</p>
-        <p>Through data-driven insights and user research, I help organizations optimize their product strategies, enhance customer experiences, and drive sustainable growth in competitive markets.</p>
-      </div>
-      <div class="about-img">
-        <img src="images/profile.jpg" alt="Pulkit Soni">
-      </div>
-    </div>
-  </section>
+.main-title-highlight {
+  color: #a86b2c; /* gold accent for the name */
+}
 
-  <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <h2 class="contact-title">Let's Connect</h2>
-    <p class="contact-desc">Ready to discuss your next product challenge? I'd love to hear about your vision and explore how we can create something extraordinary together.</p>
-    <div class="contact-btns">
-      <a href="https://www.linkedin.com/in/pulkit-soni-156563256/" class="contact-linkedin" target="_blank">Connect on LinkedIn</a>
-      <a href="https://mail.google.com/mail/?view=cm&to=pulkitsoni2004@gmail.com" class="contact-email" target="_blank">Send Email</a>
-    </div>
-    <div class="contact-footer">
-      <hr>
-      <div class="footer-content">
-        © 2025 Pulkit Soni. Crafted with strategic thinking and creative execution.
-      </div>
-    </div>
-  </section>
-</body>
-</html>
+.subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  max-width: 40rem;
+}
+
+/* Right column (achivements card) */
+.landing-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.achievements {
+  background: #3366cc;
+  border-radius: 20px;
+  padding: 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.14);
+  min-width: 340px;
+  max-width: 720px;
+  width: 60%;
+}
+
+/* single achievement row */
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 4px 2px;
+}
+
+.achieve-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.04);
+}
+
+.achieve-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+.achieve-text {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* subtle divider (optional) */
+.achievements .divider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 1px;
+  margin: 6px 0;
+}
+
+/* ===== Rest of the page (unchanged, merged from original) ===== */
+.case-studies {
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+  background: #fff;
+}
+.case-studies h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.cs-desc {
+  font-size: 1.3rem;
+  color: #233;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.case-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.case-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(24,54,105,0.10);
+  width: 370px;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s;
+  min-height: 100%;
+  margin-bottom: 2rem;
+}
+.case-card:hover { transform: translateY(-8px) scale(1.03);}
+.case-card img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  background: #e9e9e9;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.case-content {
+  padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.case-content h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+}
+.case-content p {
+  color: #2e3b4e;
+  font-size: 1.07rem;
+  margin-bottom: 1.3rem;
+  margin-top: 0;
+}
+.case-btn {
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  font-size: 1.07rem;
+  transition: color 0.18s;
+  margin-top: auto;
+  display: inline-block;
+}
+.case-btn:hover {
+  color: #1b6ef3;
+}
+.arrow { font-size: 1em; }
+
+.featured-projects {
+  padding: 4rem 0 2rem 0;
+  background: #f8fafc;
+  text-align: center;
+}
+.featured-projects h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.fp-desc {
+  font-size: 1.1rem;
+  color: #48506e;
+  margin-bottom: 2.5rem;
+}
+.projects-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(24,54,105,0.07);
+  width: 180px;
+  padding: 2.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.18s;
+}
+.project-card:hover { transform: translateY(-8px) scale(1.05);}
+.project-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #23272f;
+}
+.project-link {
+  text-decoration: none;
+  color: #23272f;
+  font-weight: 700;
+  font-size: 1.18rem;
+  transition: color 0.2s;
+}
+.project-link:hover {
+  color: #1b6ef3;
+}
+
+.top-decks {
+  padding: 4rem 0 2rem 0;
+  background: #fff;
+  text-align: center;
+}
+.top-decks h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.td-desc {
+  font-size: 1.1rem;
+  color: #48506e;
+  margin-bottom: 2.5rem;
+}
+.deck-cards-img {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.deck-card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+}
+.deck-title-img {
+  font-size: 1.19rem;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  margin-top: 0.4rem;
+}
+.deck-card-img img {
+  width: 100%;
+  max-width: 340px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(24,54,105,0.08);
+  background: #e9e9e9;
+}
+.top-decks-btn {
+  display: block;
+  margin: 2.5rem auto 0 auto;
+  background: #000;
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 600;
+  padding: 1rem 2.8rem;
+  border-radius: 13px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(24,54,105,0.09);
+  transition: background 0.18s, color 0.18s;
+  max-width: 370px;
+  text-align: center;
+}
+.top-decks-btn:hover {
+  background: #1b6ef3;
+  color: #fff;
+}
+
+.about-me {
+  padding: 4rem 0 2rem 0;
+  background: #f8fafc;
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-text {
+  flex: 2;
+}
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.about-text p {
+  font-size: 1.12rem;
+  color: #23272f;
+  margin-bottom: 1.1rem;
+}
+.about-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 8px 48px rgba(24,54,105,0.21);
+}
+
+.contact-section {
+  padding: 4rem 0 1rem 0;
+  text-align: center;
+  background: #fff;
+}
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3972ff;
+  margin-bottom: 1rem;
+}
+.contact-desc {
+  font-size: 1.18rem;
+  color: #c0c5d4;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.7rem;
+}
+.contact-linkedin {
+  background: #3972ff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 2.3rem;
+  border-radius: 12px;
+  font-size: 1.17rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 2px 12px rgba(57,114,255,0.08);
+  transition: background 0.15s;
+}
+.contact-linkedin:hover { background: #2355d3;}
+.contact-email {
+  background: #f3f3f4;
+  color: #3972ff;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 2.3rem;
+  border-radius: 12px;
+  font-size: 1.17rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+}
+.contact-email:hover {
+  background: #e6e6e8;
+}
+.contact-footer {
+  margin-top: 2.5rem;
+}
+.contact-footer hr {
+  border: none;
+  border-top: 1px solid #e7e7e7;
+  margin: 0 auto 1.1rem auto;
+  width: 80%;
+}
+.footer-content {
+  color: #8b8b8b;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .landing-left {
+    flex: 0 0 380px;
+    min-width: 260px;
+  }
+  .landing-avatar {
+    width: 320px;
+  }
+  .achievements {
+    min-width: 320px;
+    padding: 18px 16px;
+    width: 100%;
+  }
+
+  .case-card { width: 320px; }
+}
+
+@media (max-width: 900px) {
+  .landing {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 4% 60px 4%;
+  }
+  .landing-left, .landing-right {
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .landing-left {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .landing-avatar {
+    width: 240px;
+  }
+  .landing-left h1 {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  .achievements {
+    width: 96%;
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 700px) {
+  .landing-left h1 {
+    font-size: 2.0rem;
+  }
+  .landing-avatar {
+    width: 150px;
+  }
+  .achievements {
+    padding: 12px 3vw;
+    gap: 12px;
+    min-width: 0;
+    width: 96vw;
+    font-size: 0.98rem;
+  }
+  .achieve-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .achieve-icon img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.landing-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.hero-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-btn {
+  background: #fff;
+  color: #000;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: background 0.18s, color 0.18s;
+}
+
+.hero-btn:hover {
+  background: #1b6ef3;
+  color: #fff;
+}
+
+.contact-btns {
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-linkedin,
+.contact-email {
+  white-space: nowrap;
+}
