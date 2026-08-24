@@ -456,6 +456,24 @@ body {
   gap: 0.7rem;
   cursor: pointer;
 }
+.contact-github {
+  background: #24292f;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 2.3rem;
+  border-radius: 12px;
+  font-size: 1.17rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: background 0.15s;
+}
+.contact-github:hover {
+  background: #000;
+}
 .contact-email:hover {
   background: #e6e6e8;
 }
