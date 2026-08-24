@@ -65,14 +65,14 @@ body {
   flex: 0 0 500px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers horizontally */
-  justify-content: center; /* centers vertically */
+  align-items: center;
+  justify-content: center;
   padding-right: 30px;
-  text-align: center; /* ensures text aligns to center */
+  text-align: center;
 }
 
 .landing-avatar {
-  width: 500px;          /* enlarged for stronger hero */
+  width: 500px;
   max-width: 95%;
   margin: 0 0 18px 0;
   border-radius: 18px;
@@ -90,7 +90,7 @@ body {
 }
 
 .main-title-highlight {
-  color: #a86b2c; /* gold accent for the name */
+  color: #a86b2c;
 }
 
 .subtitle {
@@ -102,7 +102,7 @@ body {
   max-width: 40rem;
 }
 
-/* Right column (achivements card) */
+/* Right column (achievements card) */
 .landing-right {
   flex: 1;
   display: flex;
@@ -125,7 +125,6 @@ body {
   width: 60%;
 }
 
-/* single achievement row */
 .achievement {
   display: flex;
   align-items: center;
@@ -159,15 +158,6 @@ body {
   line-height: 1.2;
 }
 
-/* subtle divider (optional) */
-.achievements .divider {
-  height: 1px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 1px;
-  margin: 6px 0;
-}
-
-/* ===== Rest of the page (unchanged, merged from original) ===== */
 .case-studies {
   padding: 4rem 0 2rem 0;
   text-align: center;
@@ -430,8 +420,9 @@ body {
 .contact-btns {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 2.7rem;
+  flex-wrap: wrap;
 }
 .contact-linkedin {
   background: #3972ff;
@@ -449,6 +440,22 @@ body {
   transition: background 0.15s;
 }
 .contact-linkedin:hover { background: #2355d3;}
+.contact-github {
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 2.3rem;
+  border-radius: 12px;
+  font-size: 1.17rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 2px 12px rgba(17,24,39,0.10);
+  transition: background 0.15s;
+}
+.contact-github:hover { background: #000; }
 .contact-email {
   background: #f3f3f4;
   color: #3972ff;
@@ -481,7 +488,6 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 1200px) {
   .landing-left {
     flex: 0 0 380px;
@@ -495,7 +501,6 @@ body {
     padding: 18px 16px;
     width: 100%;
   }
-
   .case-card { width: 320px; }
 }
 
