@@ -155,6 +155,7 @@ a {
   color: var(--slate);
   font-size: 0.93rem;
   font-weight: 500;
+  white-space: nowrap;
   transition: background 0.18s ease, color 0.18s ease;
 }
 .nav-links a:hover,
